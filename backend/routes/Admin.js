@@ -62,7 +62,7 @@ router.get('/auth/token', async (req, res) => {
     const user = { name, email, picture };
 
     const token = jwt.sign({ user }, config.tokenSecret, { expiresIn: config.tokenExpiration });
-    res.cookie('token', token, { maxAge: config.tokenExpiration, httpOnly: true });
+    res.cookie('token', token, { maxAge: config.tokenExpiration, httpOnly: false});
     console.log("token",token)
 
     res.status(201).json({ user });
@@ -88,7 +88,8 @@ router.get('/auth/logged_in', async (req, res) => {
     if (!admin) return res.json({ loggedIn: false });
 
     const newToken = jwt.sign({ user }, config.tokenSecret, { expiresIn: config.tokenExpiration });
-    res.cookie('token', newToken, { maxAge: config.tokenExpiration, httpOnly: true });
+    res.cookie('token', newToken, { maxAge: config.tokenExpiration, httpOnly: false });
+    
     res.status(200).json({ loggedIn: true, user });
   } catch (err) {
     res.json({ loggedIn: false });
