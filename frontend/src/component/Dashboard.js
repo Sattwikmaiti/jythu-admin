@@ -10,33 +10,35 @@ const Dashboard = ({ attendanceRating }) => {
 const absentCount = attendanceRating.filter(item => item.attendence === 'Absent').length;
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridGap: '30px' ,padding:'2rem',color:'white'}}>
+    <>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridGap: '10px' ,padding:'2rem',color:'white',backgroundColor:'white'}}>
       <div >
        
-        <div style={{ height: '400px', width: '700px' ,padding:'20px', backgroundColor: '#f9f9f9', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)'}}>
+       <center>
+        <div style={{ height: '450px', width: '400px' , borderRadius: '8px',}}>
         <h2>Last 30 Days Rating</h2>
           <Last30DaysRatingChart data={attendanceRating} />
 
         </div>
+        </center>
       </div>
-
-      <div>
-        
-        <div style={{ height: '300px', width: '100%',padding:'10px',backgroundColor: '#f9f9f9', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)',display:'flex',justifyContent: 'center', alignItems: 'center' }}>
-        <h2>Attendance Percentage</h2>
-          <AttendancePieChart presentCount={presentCount} absentCount={absentCount} />
-        </div>
+      <div style={{ height: '400px', width: '100%',display:'flex',justifyContent: 'center', alignItems: 'center',flexDirection:'row' ,color:'black',background:'white'}}>
+    <div >
+      <h4>Attendance Percentage  : {(presentCount * 100.0)/(presentCount+absentCount)} </h4>
+        <AttendancePieChart presentCount={presentCount} absentCount={absentCount} />
       </div>
-
-      <div style={{ height: '500px', width: '700px' ,padding:'10px', backgroundColor: '#f9f9f9', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)'}}>
+    </div>
+      
+      <div style={{ height: '450px', width: '400px' , borderRadius: '8px', }}>
         <h2>Monthly Attendance</h2>
         <MonthlyAttendanceChart data={attendanceRating} />
       </div>
+     
 
-      <div >
-       
-      </div>
     </div>
+    
+    
+    </>
   );
 };
 
