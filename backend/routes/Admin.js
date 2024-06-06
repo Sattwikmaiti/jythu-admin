@@ -64,7 +64,7 @@ router.get('/auth/token', async (req, res) => {
     const token = jwt.sign({ user }, config.tokenSecret, { expiresIn: config.tokenExpiration });
     res.cookie('token', token, { maxAge: config.tokenExpiration, httpOnly: false});
     console.log("token",token)
-
+    
     res.status(201).json({ user });
   } catch (err) {
     console.error('Error: ', err);
@@ -76,6 +76,7 @@ router.get('/auth/logged_in', async (req, res) => {
   try {
     
     const token = req.cookies.token;
+    
     if (!token) return res.json({ loggedIn: false });
 
     const { user } = jwt.verify(token, config.tokenSecret);
@@ -88,7 +89,7 @@ router.get('/auth/logged_in', async (req, res) => {
     if (!admin) return res.json({ loggedIn: false });
 
     const newToken = jwt.sign({ user }, config.tokenSecret, { expiresIn: config.tokenExpiration });
-    res.cookie('token', newToken, { maxAge: config.tokenExpiration, httpOnly: false });
+    res.cookie('token', newToken, { maxAge: config.tokenExpiration, httpOnly: false , secure: true,  sameSite: 'none' });
     
     res.status(200).json({ loggedIn: true, user });
   } catch (err) {
