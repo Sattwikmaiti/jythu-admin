@@ -1,0 +1,213 @@
+.homeClass{
+    background-color: #f5f5f5;
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ 
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.leftHome{
+    width: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self:center;
+    align-items:center;
+    
+    gap:10px;
+
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x:hidden;
+    width:20%;
+    background-color:#62d3b1;
+    color:white
+
+}
+
+.leftHome::-webkit-scrollbar {
+    width: 0px;  /* Hide vertical scrollbar */
+    height: 0px; /* Hide horizontal scrollbar */
+}
+
+.FormBox{
+    background-color: #ffffff46;
+
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    color:white
+ 
+
+}
+.FormBox .form{
+    background-color:rgb(255, 255, 255);
+    width:90%;
+    
+
+}
+.FormBox button{
+    color:black
+}
+
+.rightHome{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-height: 100vh;
+    overflow-y: scroll;
+
+background-color:rgb(9, 32, 30);
+
+}
+
+.emp-box{
+    background-color:none;
+    
+    padding: 20px;
+   
+    display: flex;
+    flex-direction: row-reverse;
+
+    border-radius: 0px 10px 100px 40px; 
+    
+    
+    
+}
+
+.emp-det{
+    width:90%
+}
+
+.emp-box div{
+    padding:10px
+}
+
+
+.emp-profile{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.emp-button{
+    background-color: #579b50;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #62d3b1;
+    font-weight: bold;
+    transition: 0.3s;
+    position:absolute;
+    top:10px
+}
+
+
+.emp-button Button{
+    background-color: #0a1c08;
+}
+.two-buttons{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    flex-direction: column;
+
+}
+
+.hometab Button{
+    width:15rem;
+    background-color:rgb(24, 45, 33);
+}
+
+
+.leftHome img{
+    padding:0.5rem;
+    border:5px solid rgb(105, 151, 129)
+}
+
+.leftHome p{
+    padding:1rem;
+    background-color:rgb(24, 45, 33);
+    width:15rem;
+    color:rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* General container for the card */
+.emp-det-card {
+    background-color: #1d4e49; 
+   
+    border: 1px solid #dcdcdc; /* Subtle border color */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    margin: 20px;
+    transition: color 0.3s;
+    width: 100%; /* Fixed width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 10px 100px 40px; 
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif /* Better font design */
+  }
+  
+  /* Header styling */
+  .emp-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #7eb5a2;
+  }
+  
+  /* Detail items styling */
+  .emp-phone,
+  .emp-email,
+  .emp-address {
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: medium;
+    background-color: #548f7e; /* Light background color for details */
+    padding: 8px;
+    border-radius: 8px; /* Rounded corners for detail boxes */
+  }
+  
+  /* Profile link styling */
+  .emp-profile a {
+    text-decoration: none;
+    color: #008000; /* Green shade */
+    font-weight: bold;  
+    background-color:#dcd3d3;
+    padding:0.5rem;
+    border-radius:10px
+  
+  }
+  
+  /* Hover effect for the card */
+
+  /* Hover effect for the profile link */
+
+  /* Light animation on hover */
+  @keyframes hoverGlow {
+    from {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+  }
+  
+  .emp-det-card {
+    animation: hoverGlow 0.5s forwards;
+  }
+  

@@ -1,0 +1,70 @@
+/* Profile.css */
+.profile-container {
+    background-color: #45B08C;
+    padding: 20px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loading-container h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+
+
+  
+  
+  .dashboard h2 {
+    margin-top: 0;
+    color: #2d502c;
+  }
+  
+  /* Additional styling for table and chart if needed */
+  
+  .profile{
+    display:flex;
+    flex-direction: row;
+    padding:2rem;
+    background-color:#45B08C;;
+    display: flex;
+    flex-direction: row;
+
+  
+  }
+
+  .togetherprofile{
+
+    background-color:#2c3e50
+  }
+  .left{
+    width: 100%;
+    background-color:#2c3e5000;
+    color: #fff;
+    padding:1rem;
+   
+
+  }
+  
+  .right{
+    width: 100%;
+    padding:1rem
+
+  }
