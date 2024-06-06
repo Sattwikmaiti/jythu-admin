@@ -63,7 +63,7 @@ router.get('/auth/token', async (req, res) => {
 
     const token = jwt.sign({ user }, config.tokenSecret, { expiresIn: config.tokenExpiration });
     res.cookie('token', token, { maxAge: config.tokenExpiration, httpOnly: true });
- 
+    console.log("token",token)
 
     res.status(201).json({ user });
   } catch (err) {
@@ -74,6 +74,7 @@ router.get('/auth/token', async (req, res) => {
 
 router.get('/auth/logged_in', async (req, res) => {
   try {
+    
     const token = req.cookies.token;
     if (!token) return res.json({ loggedIn: false });
 
