@@ -62,7 +62,7 @@ router.get('/auth/token', async (req, res) => {
     const user = { name, email, picture };
 
     const token = jwt.sign({ user }, config.tokenSecret, { expiresIn: config.tokenExpiration });
-    res.cookie('token', token, { maxAge: config.tokenExpiration, httpOnly: false});
+    res.cookie('token', token, { maxAge: config.tokenExpiration, httpOnly: false,secure: true,  sameSite: 'none'});
     console.log("token",token)
     
     res.status(201).json({ user });
