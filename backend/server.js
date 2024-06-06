@@ -16,11 +16,11 @@ app.use(
   }),
 )
 app.set("trust proxy", 1);
-app.use(cookie: {
+app.use({cookie: {
       secure: true, // required for cookies to work on HTTPS
       httpOnly: false,
       sameSite: 'none'
-    });
+    }});
 app.use(cookieParser())
 mongoose
   .connect(process.env.MONGO_URL, {
