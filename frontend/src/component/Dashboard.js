@@ -11,25 +11,25 @@ const absentCount = attendanceRating.filter(item => item.attendence === 'Absent'
 
   return (
     <>
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridGap: '10px' ,padding:'2rem',color:'white',backgroundColor:'white'}}>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridGap: '15px' ,padding:'2rem',color:'white',}}>
       <div >
        
        <center>
-        <div style={{ height: '450px', width: '400px' , borderRadius: '8px',}}>
+        <div style={{ height: '450px', width: '400px' , borderRadius: '8px',display:'flex',justifyContent: 'center', padding:'5px',backgroundColor:'#BCEBD7',flexDirection:'column'}}>
         <h2>Last 30 Days Rating</h2>
           <Last30DaysRatingChart data={attendanceRating} />
 
         </div>
         </center>
       </div>
-      <div style={{ height: '400px', width: '100%',display:'flex',justifyContent: 'center', alignItems: 'center',flexDirection:'row' ,color:'black',background:'white'}}>
+      <div style={{ height: '450px', width: '100%',display:'flex',justifyContent: 'center', alignItems: 'center',flexDirection:'row' ,color:'black',padding:'5px',backgroundColor:'#BCEBD7'}}>
     <div >
       <h4>Attendance Percentage  : {(presentCount * 100.0)/(presentCount+absentCount)} </h4>
         <AttendancePieChart presentCount={presentCount} absentCount={absentCount} />
       </div>
     </div>
       
-      <div style={{ height: '450px', width: '400px' , borderRadius: '8px', }}>
+      <div style={{ height: '450px', width: '400px' , borderRadius: '8px',padding:'5px',backgroundColor:'#BCEBD7',display:'flex',justifyContent: 'center',flexDirection:'column' }}>
         <h2>Monthly Attendance</h2>
         <MonthlyAttendanceChart data={attendanceRating} />
       </div>
