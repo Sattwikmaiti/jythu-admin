@@ -65,7 +65,7 @@ useEffect(() => {
 
   return (
     <div div style={{ textAlign: 'center', margin: '20px 20px' }}>
-      <h2 style={{ textAlign: 'center', margin: '100px 20px',color:'white' }}>Image File Lists</h2>
+      <h2 style={{ textAlign: 'center', margin: '100px 20px',color:'black' ,backgroundColor:'#BCEBD7',padding:'2rem'}}>Image File Lists</h2>
       <div style={{ textAlign: 'center', marginBottom: '10px' }}>
         <label htmlFor="dateFilter" style={{ marginRight: '10px' }}>Filter by Date: </label>
         <input 

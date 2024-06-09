@@ -132,7 +132,7 @@ const server=process.env.REACT_APP_SERVER_URL
   };
 
   return (
-    <div className="add-admin-container">
+    <div className="add-admin-container" style={{backgroundColor:'#BCEBD7'}}>
       <Navbar />
       <h2>Add New Admin</h2>
       <form onSubmit={handleSubmit} className="add-admin-form">

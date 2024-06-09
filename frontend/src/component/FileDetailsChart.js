@@ -104,7 +104,7 @@ const FileDetailsPieChart = ({ file }) => {
 const FileDetailsChart = ({data}) => (
   <div style={{ height: '100vh' }}>
 
-<h2 style={{ textAlign: 'center', margin: '150px 20px',color:'white' }}>Daily Employee App Usage Chart</h2>
+<h2 style={{ textAlign: 'center', margin: '150px 20px',color:'black' ,backgroundColor:'#BCEBD7',padding:'2rem'}}>Daily Employee App Usage Chart</h2>
    
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '50px',backgroundColor:'#45B08C',height:'700px',padding:'3rem',overflowY:'scroll' }}>
     {data

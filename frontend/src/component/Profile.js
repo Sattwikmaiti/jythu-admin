@@ -8,6 +8,7 @@ import './Profile.css';
 import AddAttendence from './AddAttendence';
 import Navbar from './Navbar'
 import AggregateRating from './AggregateRating';
+
 const Profile = () => {
  
   const { id } = useParams();
@@ -57,6 +58,7 @@ const server=process.env.REACT_APP_SERVER_URL
         </div>
           <div className="togetherprofile">
           <Dashboard attendanceRating={user?.attendance_rating} />
+       
           <FileListTable id={user?._id} />
           <FileDetailsChart data={user?.dailyworking} />
           </div>

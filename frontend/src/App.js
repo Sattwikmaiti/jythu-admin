@@ -7,8 +7,7 @@ import NotFound from './component/NotFound'; // Assuming you have a NotFound com
 import axios from 'axios';
 import Notification from './component/Notification';
 import AddAdmin from './component/AddAdmin';
-import Cookies from 'js-cookie';
-
+import "./App.css"
 axios.defaults.withCredentials = true;
 const serverUrl = process.env.REACT_APP_SERVER_URL;
 
